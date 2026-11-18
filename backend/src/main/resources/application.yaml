@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: blogchi-backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/blogchi?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Aa1904967699
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+blog:
+  jwt:
+    secret: blogchi-secret-key-keep-it-safe-in-production
+    expire-days: 7
+
+logging:
+  level:
+    root: info
+    com.blogchi: debug
